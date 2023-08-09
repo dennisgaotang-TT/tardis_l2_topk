@@ -1,0 +1,16 @@
+[package]
+name = "verify"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ordered-float = { version = "2.0", features = ["serde"] }
+flate2 = "1.0"
+csv = "1.1"
+colored = "2.0"
+chrono = "0.4"
+regex = "1.5"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
