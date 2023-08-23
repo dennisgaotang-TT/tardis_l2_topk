@@ -1,0 +1,220 @@
+Report: comparing the gap between previous day end map state and current day initial snapshot state
+Datasets: consecutive datasets from "binance-delivery_start-end-map_2023-07-15_BTCUSD_PERP.bin" to "binance-delivery_start-end-map_2023-07-24_BTCUSD_PERP.bin"
+
+*************************************************************************************************
+Result comparing the gap between day 2023-07-15's end state and day 2023-07-16's start state: 
+
+Len: 	 prev_asks_len = 4955 ; prev_bids_len = 6374
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=981; asks_min_len=1000 
+	 bids_common_count=990; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 19, 0.019% 
+	 bids: 10, 0.01% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 30283.7 , prev_low_ask_quantity = 1433.0 ; prev_high_bid_price = 30283.6 , prev_high_bid_quantity = 24597.0
+	 prev_low_ask_price = 30283.7 , prev_low_ask_quantity = 1437.0 ; prev_high_bid_price = 30283.6 , prev_high_bid_quantity = 25396.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-15 23:59:59.980000; prev_local_timestamp = 2023-07-15 23:59:59.983948
+	 curr_timestamp = 2023-07-16 00:00:00.110000; prev_local_timestamp = 2023-07-16 00:00:00.379886
+Summary: 
+	 asks map: 19 different pairs occured out of minLen=1000 in 130(timestamp)/395.938(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-16's end state and day 2023-07-17's start state: 
+
+Len: 	 prev_asks_len = 3788 ; prev_bids_len = 3933
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=978; asks_min_len=1000 
+	 bids_common_count=964; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 22, 0.022% 
+	 bids: 36, 0.036% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 30230.0 , prev_low_ask_quantity = 6329.0 ; prev_high_bid_price = 30229.9 , prev_high_bid_quantity = 11673.0
+	 prev_low_ask_price = 30230.0 , prev_low_ask_quantity = 6390.0 ; prev_high_bid_price = 30229.9 , prev_high_bid_quantity = 11999.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-16 23:59:59.994000; prev_local_timestamp = 2023-07-16 23:59:59.998561
+	 curr_timestamp = 2023-07-17 00:00:00.177000; prev_local_timestamp = 2023-07-17 00:00:00.342658
+Summary: 
+	 asks map: 22 different pairs occured out of minLen=1000 in 183(timestamp)/344.097(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-17's end state and day 2023-07-18's start state: 
+
+Len: 	 prev_asks_len = 4011 ; prev_bids_len = 4586
+     	 curr_asks_len = 1000 ; curr_bids_len = 1002
+
+#Common key-value pairs: 
+	 asks_common_count=993; asks_min_len=1000 
+	 bids_common_count=994; bids_min_len=1002 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 7, 0.007% 
+	 bids: 8, 0.008% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 30135.6 , prev_low_ask_quantity = 17895.0 ; prev_high_bid_price = 30135.5 , prev_high_bid_quantity = 3495.0
+	 prev_low_ask_price = 30135.6 , prev_low_ask_quantity = 17907.0 ; prev_high_bid_price = 30135.5 , prev_high_bid_quantity = 3002.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-17 23:59:59.983000; prev_local_timestamp = 2023-07-17 23:59:59.988138
+	 curr_timestamp = 2023-07-18 00:00:00.185000; prev_local_timestamp = 2023-07-18 00:00:00.271329
+Summary: 
+	 asks map: 7 different pairs occured out of minLen=1000 in 202(timestamp)/283.191(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-18's end state and day 2023-07-19's start state: 
+
+Len: 	 prev_asks_len = 2242 ; prev_bids_len = 2611
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=997; asks_min_len=1000 
+	 bids_common_count=994; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 3, 0.003% 
+	 bids: 6, 0.006% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 29854.5 , prev_low_ask_quantity = 16892.0 ; prev_high_bid_price = 29854.4 , prev_high_bid_quantity = 5894.0
+	 prev_low_ask_price = 29854.5 , prev_low_ask_quantity = 16935.0 ; prev_high_bid_price = 29854.4 , prev_high_bid_quantity = 5868.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-18 23:59:59.902000; prev_local_timestamp = 2023-07-18 23:59:59.907424
+	 curr_timestamp = 2023-07-19 00:00:00.128000; prev_local_timestamp = 2023-07-19 00:00:00.287806
+Summary: 
+	 asks map: 3 different pairs occured out of minLen=1000 in 226(timestamp)/380.382(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-19's end state and day 2023-07-20's start state: 
+
+Len: 	 prev_asks_len = 4224 ; prev_bids_len = 4567
+     	 curr_asks_len = 999 ; curr_bids_len = 1002
+
+#Common key-value pairs: 
+	 asks_common_count=970; asks_min_len=999 
+	 bids_common_count=976; bids_min_len=1002 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 29, 0.02902902902902903% 
+	 bids: 26, 0.026026026026026026% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 29895.3 , prev_low_ask_quantity = 15270.0 ; prev_high_bid_price = 29895.2 , prev_high_bid_quantity = 14041.0
+	 prev_low_ask_price = 29895.3 , prev_low_ask_quantity = 14552.0 ; prev_high_bid_price = 29895.2 , prev_high_bid_quantity = 12951.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-19 23:59:59.969000; prev_local_timestamp = 2023-07-19 23:59:59.973848
+	 curr_timestamp = 2023-07-20 00:00:00.206000; prev_local_timestamp = 2023-07-20 00:00:00.284155
+Summary: 
+	 asks map: 29 different pairs occured out of minLen=999 in 237(timestamp)/310.307(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-20's end state and day 2023-07-21's start state: 
+
+Len: 	 prev_asks_len = 4900 ; prev_bids_len = 4645
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=985; asks_min_len=1000 
+	 bids_common_count=987; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 15, 0.015% 
+	 bids: 13, 0.013% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 29787.8 , prev_low_ask_quantity = 3361.0 ; prev_high_bid_price = 29787.7 , prev_high_bid_quantity = 22141.0
+	 prev_low_ask_price = 29787.8 , prev_low_ask_quantity = 3376.0 ; prev_high_bid_price = 29787.7 , prev_high_bid_quantity = 23816.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-20 23:59:59.991000; prev_local_timestamp = 2023-07-20 23:59:59.994340
+	 curr_timestamp = 2023-07-21 00:00:00.126000; prev_local_timestamp = 2023-07-21 00:00:00.307546
+Summary: 
+	 asks map: 15 different pairs occured out of minLen=1000 in 135(timestamp)/313.206(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-21's end state and day 2023-07-22's start state: 
+
+Len: 	 prev_asks_len = 3945 ; prev_bids_len = 4617
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=988; asks_min_len=1000 
+	 bids_common_count=993; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 12, 0.012% 
+	 bids: 7, 0.007% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 29889.2 , prev_low_ask_quantity = 10335.0 ; prev_high_bid_price = 29889.1 , prev_high_bid_quantity = 16452.0
+	 prev_low_ask_price = 29889.2 , prev_low_ask_quantity = 9748.0 ; prev_high_bid_price = 29889.1 , prev_high_bid_quantity = 16480.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-21 23:59:59.953000; prev_local_timestamp = 2023-07-21 23:59:59.958708
+	 curr_timestamp = 2023-07-22 00:00:00.176000; prev_local_timestamp = 2023-07-22 00:00:00.277882
+Summary: 
+	 asks map: 12 different pairs occured out of minLen=1000 in 223(timestamp)/319.174(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-22's end state and day 2023-07-23's start state: 
+
+Len: 	 prev_asks_len = 3604 ; prev_bids_len = 3817
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=969; asks_min_len=1000 
+	 bids_common_count=954; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 31, 0.031% 
+	 bids: 46, 0.046% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 29779.2 , prev_low_ask_quantity = 1236.0 ; prev_high_bid_price = 29779.1 , prev_high_bid_quantity = 24082.0
+	 prev_low_ask_price = 29779.2 , prev_low_ask_quantity = 2363.0 ; prev_high_bid_price = 29779.1 , prev_high_bid_quantity = 19736.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-22 23:59:59.993000; prev_local_timestamp = 2023-07-22 23:59:59.997179
+	 curr_timestamp = 2023-07-23 00:00:00.170000; prev_local_timestamp = 2023-07-23 00:00:00.249381
+Summary: 
+	 asks map: 31 different pairs occured out of minLen=1000 in 177(timestamp)/252.202(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
+Result comparing the gap between day 2023-07-23's end state and day 2023-07-24's start state: 
+
+Len: 	 prev_asks_len = 4083 ; prev_bids_len = 5013
+     	 curr_asks_len = 1000 ; curr_bids_len = 1000
+
+#Common key-value pairs: 
+	 asks_common_count=983; asks_min_len=1000 
+	 bids_common_count=975; bids_min_len=1000 
+
+Descrepency: min(map1.len, map2.len) - #common-pair
+	 asks: 17, 0.017% 
+	 bids: 25, 0.025% 
+
+Lowest_ask & highest bid: 
+	 prev_low_ask_price = 30076.9 , prev_low_ask_quantity = 22409.0 ; prev_high_bid_price = 30076.8 , prev_high_bid_quantity = 1447.0
+	 prev_low_ask_price = 30076.9 , prev_low_ask_quantity = 22285.0 ; prev_high_bid_price = 30076.8 , prev_high_bid_quantity = 1522.0
+
+Timestamps: 
+	 prev_timestamp = 2023-07-23 23:59:59.989000; prev_local_timestamp = 2023-07-23 23:59:59.993113
+	 curr_timestamp = 2023-07-24 00:00:00.127000; prev_local_timestamp = 2023-07-24 00:00:00.255484
+Summary: 
+	 asks map: 17 different pairs occured out of minLen=1000 in 138(timestamp)/262.371(local_timestamp) miliseconds.
+
+*********************************************************************************************************************************************
