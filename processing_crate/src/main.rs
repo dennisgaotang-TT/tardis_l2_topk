@@ -1,4 +1,5 @@
 extern crate csv;
+use std::fs;
 use std::error::Error;
 use csv::Writer;
 use std::fs::File;
@@ -163,7 +164,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("original_parent_folder = {}", original_parent_folder);
     let out_file_name = format!("/{}_book_snapshot_200_{}_{}.csv", exchange_in, date_in, symbol_in);
     // store the output file into the original folder
-    let file_out = File::create(original_parent_folder.to_string() + &out_file_name)?;
+    // Create the directory
+    let new_dir_name = original_parent_folder.to_string()+ "/orderbook_snapshots/";
+    match fs::create_dir(&new_dir_name) {
+        Ok(()) => println!("Directory created successfully."),
+        Err(err) => println!("Error creating directory: {}", err),
+    }
+    let file_out = File::create(new_dir_name + &out_file_name)?;
     let mut writer = Writer::from_writer(file_out);
     // Initial two headers
     let initial_headers: Vec<String> = vec!["exchange".to_string(), "symbol".to_string(), "timestamp".to_string(), "local_timestamp".to_string()];

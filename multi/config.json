@@ -1,0 +1,7 @@
+{
+    "num_levels": 200, 
+    "choose_to_maintain_smaller_map": true,
+    "maintain_rate": 5,
+    "choose_to_fixed_time_snapshot": true,
+    "snapshot_fixed_time_interval": 0
+}
