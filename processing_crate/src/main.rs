@@ -10,7 +10,20 @@ use colored::*;
 use ordered_float::OrderedFloat;
 use chrono::{DateTime, Local, NaiveDateTime, TimeZone, Utc};
 use regex::Regex;
+use std::io::Read;
+use serde_derive::Deserialize;
+use serde_json;
 use std::env;
+
+// struct for reading config parameters
+#[derive(Deserialize)]
+struct Config {
+    num_levels: usize,
+    choose_to_maintain_smaller_map: bool,
+    maintain_rate: usize,
+    choose_to_fixed_time_snapshot: bool,
+    snapshot_fixed_time_interval: i64,
+}
 
 // helper function to find the n-th key in the TreeMap (ascending)
 fn find_kth_key_ascending<K: Ord, V>(map: &BTreeMap<K, V>, k: usize) -> Option<&K> {
@@ -84,19 +97,28 @@ fn parse_filename(filename: &str) -> Option<(String, String, String, String)> {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    //---Part 0: User-defined main() parameters
-    let num_levels = 200; // the number of level of snapshot specified by user
+    //---Part 0: User-defined main() parameters read from config.json file
+    // Read the configuration file
+    let mut config_file = File::open("config.json").expect("Failed to open config file");
+    let mut config_content = String::new();
+    config_file.read_to_string(&mut config_content).expect("Failed to read config file");
+
+    // Deserialize the configuration using serde_json
+    let config: Config = serde_json::from_str(&config_content).expect("Failed to parse config JSON");
+
+    // Access the parameters from the config
+    let num_levels = config.num_levels; // the number of level of snapshot specified by user
 
     // feature 1: options to shrink the internal size of the map
-    let choose_to_maintain_smaller_map:bool = true;
-    let maintain_rate = 5; // the maintain rate used to decide the size of the internal map
+    let choose_to_maintain_smaller_map:bool = config.choose_to_maintain_smaller_map;
+    let maintain_rate = config.maintain_rate; // the maintain rate used to decide the size of the internal map
     let num_levels_maintained = num_levels * maintain_rate;
 
     // feature 2: choosing whether the snapshot time to be fixed time window or by event;
     //            when choosing "by event", user choose to take a snapshot of the orderbook whenever there are updates
     //            in the snapshot within the specified depth 
-    let choose_to_fixed_time_snapshot:bool = true;
-    let snapshot_fixed_time_intervel:i64 = 0; // the fixed length snapshot time interval(millisecond) to determine snapshot frequency
+    let choose_to_fixed_time_snapshot:bool = config.choose_to_fixed_time_snapshot;
+    let snapshot_fixed_time_intervel:i64 = config.snapshot_fixed_time_interval; // the fixed length snapshot time interval(millisecond) to determine snapshot frequency
 
     //
     // The program name is always the first argument, so we skip it.
@@ -310,7 +332,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             if prev_is_snapshot && !is_snapshot {
                 // record
                 initial_snapshot_depth_at_finished_setup.push((asks.len(), bids.len()));
-                println!("is_snapshot switch from true to false record: ");
+                println!("is_snapshot switch from true to false record at timestamp = {}: ", DateTime::<Utc>::from_utc(NaiveDateTime::from_timestamp_micros(timestamp).unwrap(), Utc).format("%Y-%m-%d %H:%M:%S%.6f"));
                 println!("---before cut: asks.len = {}; bids.len = {}", asks.len(), bids.len());
         
                 if asks.len() > num_levels_maintained {
