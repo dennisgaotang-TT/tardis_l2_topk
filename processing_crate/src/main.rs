@@ -166,8 +166,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     // store the output file into the original folder
     // Create the directory
     let new_dir_name = original_parent_folder.to_string()+ "/orderbook_snapshots/";
-    match fs::create_dir(&new_dir_name) {
-        Ok(()) => println!("Directory created successfully."),
+    // Create the directory and its parent directories if they don't exist
+    match fs::create_dir_all(&new_dir_name) {
+        Ok(()) => println!("Directory created or already exists."),
         Err(err) => println!("Error creating directory: {}", err),
     }
     let file_out = File::create(new_dir_name + &out_file_name)?;
