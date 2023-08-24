@@ -21,7 +21,8 @@ The programs for rebuilding orderbook snapshot from flat incremental_orderbook_l
   4. commands:
      * cd to folder processing_crate
      * run "cargo build --release"
-     * run "./target/release/processing_crate <input_file_path>" e.g: "./target/release/processing_crate /Users/tanggao/Desktop/projects/datasets/binance-futures_incremental_book_L2_2023-03-09_BTCUSDT.csv.gz"
+     * run "./target/release/processing_crate <input_file_path>"
+     * e.g: "./target/release/processing_crate  /Users/tanggao/Desktop/projects/datasets/binance-futures_incremental_book_L2_2023-03-09_BTCUSDT.csv.gz"
      
 
 ### 1.2 multi
@@ -33,9 +34,13 @@ The programs for rebuilding orderbook snapshot from flat incremental_orderbook_l
   2. have some downloaded input incremental_orderbook_l2.csv.gz files in a folder, which has full path as <input_folder_path>
   3. by default the generated output files will be stored in "<input_folder_path>/orderbook_snapshots/" folder
   4. commands:
-     * cd to folder multi
+     * cd to folder "../multi"
      * run "cargo run <input_folder_path>" e.g: "cargo run /Users/tanggao/Desktop/projects/datasets/"
        
 ## Task 2: verify/test the generated orderbook snapshot by day to day comparison
-The way this program verifies whether the orderbook snapshot being built is correct is by comparing the previous day's last orderbook state(represented by program-maintained map) with the current day's initial 
-## Task 1: rebuild orderbook snapshot 
+The way this program verifies whether the orderbook snapshot being built is correct is by comparing the previous day's last orderbook state(represented by program-maintained map) with the current day's first exchange-provided initial orderbook snapshot.
+First, the user needs to first have consecutive-date incremental_orderbook_l2.csv.gz files downloaded and stored in the <input_folder_path>. Second, the user needs to run the project "verify_multi" by specifying 
+
+chmod +x run_generate_report.sh
+
+
