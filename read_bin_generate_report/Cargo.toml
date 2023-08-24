@@ -1,5 +1,5 @@
 [package]
-name = "test_readbin"
+name = "read_bin_generate_report"
 version = "0.1.0"
 edition = "2021"
 
