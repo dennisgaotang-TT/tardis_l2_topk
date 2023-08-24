@@ -42,5 +42,6 @@ The way this program verifies whether the orderbook snapshot being built is corr
 First, the user needs to first have consecutive-date incremental_orderbook_l2.csv.gz files downloaded and stored in the <input_folder_path>. Second, the user needs to run the project "verify_multi" by specifying 
 
 chmod +x run_generate_report.sh
+./run_generate_report.sh /Users/tanggao/Desktop/projects/datasets
 
 
